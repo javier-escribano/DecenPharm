@@ -4,10 +4,13 @@ import Header from './Components/Header/Header'
 import HomePage from './Components/HomePage/HomePage'
 import Register from './Components/Register/Register'
 import { Configuration } from './Providers/Configuration'
+import { ReactNotifications } from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
 
 function App() {
   return (
     <div className="App">
+      <ReactNotifications />
       <Configuration>
         <BrowserRouter>
           <Header />

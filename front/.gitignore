@@ -12,8 +12,8 @@ package-lock.json
 # production
 /build
 
-#backend
-store.db
+# abis
+/src/truffle_abis/**
 
 # misc
 .DS_Store
@@ -25,3 +25,6 @@ store.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# secrets
+secrets.json

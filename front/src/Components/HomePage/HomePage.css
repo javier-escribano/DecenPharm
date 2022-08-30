@@ -1,0 +1,27 @@
+.text-center {
+  text-align: center;
+}
+
+.bg-img {
+  background-image: url('../../../public/decenbackground.jpg');
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.h90 {
+  height: 90vh;
+}
+
+.meta-btn:hover {
+  color: #022440;
+}
+
+.borrar {
+  width: 500px;
+  height: auto;
+}

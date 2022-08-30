@@ -1,12 +1,16 @@
 import { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import useConfiguration from '../../Hooks/useConfiguration'
 import './Header.css'
 
 const Header = () => {
-  const { auth, connectMetamask, checkUserRegister } = useConfiguration()
+  const { auth, checkUserRegister } = useConfiguration()
+  const location = useLocation()
 
-  const handleClick = async () => {
-    await connectMetamask()
+  const getBg = () => {
+    if (location.pathname === '/') {
+      return 'bg-none'
+    } else return 'bg-gray-800'
   }
 
   useEffect(() => {
@@ -21,8 +25,17 @@ const Header = () => {
   }, [checkUserRegister])
 
   return (
-    <header className="bg-gray-800 h-10vh flex justify-between items-center">
-      <h1 className="text-slate-50 font-semibold text-xl ml-5">DecenPharm</h1>
+    <nav
+      className={`flex items-center h-10vh justify-between flex-wrap ${getBg()}`}
+    >
+      <div className="mt flex items-center flex-shrink-0 text-white ml-2">
+      <img src= {require('../../public/bru.png')} width='50px' height='20px' ></img>
+        <Link to="/">
+          <span className="ml-3 font-bold text-white decen-title text-2xl tracking-tight">
+            DecenPharm
+          </span>
+        </Link>
+      </div>
       {auth.address &&
         auth.agent &&
         auth.address.length > 0 &&
@@ -31,15 +44,7 @@ const Header = () => {
             Connected
           </span>
         )}
-      {(!auth.address || !auth.agent) && (
-        <button
-          onClick={handleClick}
-          className="bg-slate-100 h-10 py-2 px-3 mr-5 rounded-lg shadow-md"
-        >
-          Connect to Metamask!
-        </button>
-      )}
-    </header>
+    </nav>
   )
 }
 
