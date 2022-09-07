@@ -16,8 +16,7 @@ const useConfiguration = () => {
   const medChainData = MedChain.networks[5777]
   const medchain = new web3.eth.Contract(MedChain.abi, medChainData.address)
 
-  const PinataToken =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJkMzI0NzhjYS0yOTg1LTQ2NDgtYThlOC1iMGIxN2FmNjhiNWEiLCJlbWFpbCI6Imphdmllc2NyaXNhbGdhQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImlkIjoiRlJBMSIsImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxfV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2UsInN0YXR1cyI6IkFDVElWRSJ9LCJhdXRoZW50aWNhdGlvblR5cGUiOiJzY29wZWRLZXkiLCJzY29wZWRLZXlLZXkiOiIzNmRiZDljOWUzY2Q0MTgzZmE1NSIsInNjb3BlZEtleVNlY3JldCI6IjZjYzBkY2VhMDAxZDczZGQ4MGEzMDJjYTg5ZDI0OTQwZjdkOTM3MTk1OGJkMzQ3N2I1ZGI2NWY2ZDAxNjg0MGMiLCJpYXQiOjE2NTg3ODE1Nzh9.L57aShT1K5ZKZ4A5xf21Qr2yND3oCvaBnoHhrSxAg9s'
+  const PinataToken = 'YOUR_API_KEY'
 
   const EpochToDate = (date) => {
     return new Date(date * 1000).toLocaleString()
