@@ -17,7 +17,7 @@ const Map = ({ coords }) => {
   }
 
   return (
-    <LoadScript googleMapsApiKey='AIzaSyC4sKFrjCJg8IjZhQ3s_i-vISNG0A_IIZg'>
+    <LoadScript googleMapsApiKey='YOUR_GOOGLEMAPS_KEY'>
       <GoogleMap
         mapContainerStyle={{
           width: '100%',
