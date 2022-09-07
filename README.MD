@@ -21,7 +21,7 @@ All this steps will be done in a Linux system.
 
 First step is to install all the requirements the applications needs.
 ```sh
-cd front/contracts
+cd front
 npm i
 ```
 
@@ -37,11 +37,11 @@ truffle migrate --reset
 ```
 Lastly, the web page has to be intialized, we will use npm.
 ```sh
-cd front/contracts
+cd front
 npm run start
 ```
 
-This way all the environment will be up and running. However, in order to successfully run the operations is mandatory to add a Google Maps API in front/src/Hooks/useConfiguration.js and in /front/src/Components/Dashboard.jsx.
+This way all the environment will be up and running. However, in order to successfully run the operations is mandatory to add the Google Maps API in front/src/Components/Map/Map.jsx and the Pinata key in /front/src/Hooks/useConfiguration.js
 
 
 
