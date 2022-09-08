@@ -32,7 +32,7 @@ In order to deploy the system, it is needed to have a Ethereum Blockchain (or an
 
 It is crucial to indicate in front/truffle.config.js and in front/src/Components/useConfiguration.js the address and port used by Gananche. Once that action is done, Smart Contracts have to be compiled and deployed to the network.
 ```sh
-cd front/contracts
+cd front
 truffle migrate --reset
 ```
 Lastly, the web page has to be intialized, we will use npm.
